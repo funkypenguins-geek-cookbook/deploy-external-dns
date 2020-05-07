@@ -7,7 +7,7 @@ on:
 
 env:
   CHART_NAME: 'external-dns'
-  CHART_REPO: '://charts.bitnami.com/bitnami'
+  CHART_REPO: 'https://charts.bitnami.com/bitnami'
 
 jobs:
 
