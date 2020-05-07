@@ -6,8 +6,8 @@ on:
       - master
 
 env:
-  CHART_NAME: '<chart name>'
-  CHART_REPO: '<chart repo url>'
+  CHART_NAME: 'external-dns'
+  CHART_REPO: '://charts.bitnami.com/bitnami'
 
 jobs:
 
@@ -27,8 +27,10 @@ jobs:
 
         # Insert values.yaml overrides here, indented as you would in a regular YAML file
         values: |
-        #   image:
-        #     repository:   <whatever>/<whatever>:<tag>
+          provider: cloudflare
+          cloudflare:
+            apiToken: '${{ secrets.CLOUDFLARE_API_TOKEN }}'
+            email: '${{ secrets.CLOUDFLARE_EMAIL }}'
 
       # Deployment will use the kubeconfig secret you created in the repo
       env:
