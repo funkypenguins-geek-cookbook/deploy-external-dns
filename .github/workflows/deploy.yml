@@ -31,7 +31,7 @@ jobs:
           cloudflare:
             apiToken: '${{ secrets.CLOUDFLARE_API_TOKEN }}'
             email: '${{ secrets.CLOUDFLARE_EMAIL }}'
-            proxied: false
+            proxied: true
 
       # Deployment will use the kubeconfig secret you created in the repo
       env:
