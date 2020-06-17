@@ -5,6 +5,7 @@ on:
     branches:
       - master
 
+
 env:
   CHART_NAME: 'external-dns'
   CHART_REPO: 'https://charts.bitnami.com/bitnami'
